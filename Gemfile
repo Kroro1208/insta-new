@@ -69,6 +69,9 @@ group :development do
   # gem "spring"
 end
 
+# 認証
+gem 'sorcery'
+
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
