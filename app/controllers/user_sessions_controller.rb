@@ -7,8 +7,8 @@ class UserSessionsController < ApplicationController
     if user
       redirect_back_or_to '/', success: 'ログインしました'
     else
-      flash.now[:danger] = 'ログインに失敗しました'
-      # flash.now[:danger] = I18n.t('activerecord.errors.user_session.create_error')
+      # flash.now[:danger] = 'ログインに失敗しました'
+      flash.now[:danger] = I18n.t('activerecord.errors.user_session.create_error')
       render :new, status: :unprocessable_entity
     end
   end
