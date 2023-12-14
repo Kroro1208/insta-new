@@ -38,6 +38,7 @@ module InstaCloneVer7
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
     config.i18n.default_locale = :ja
   end
 end
