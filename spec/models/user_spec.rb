@@ -16,6 +16,7 @@
 
 require 'rails_helper'
 
+#まだ未定義
 RSpec.describe User, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
