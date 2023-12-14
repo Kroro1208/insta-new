@@ -1,9 +1,10 @@
 ---
 EnableDefaultLinters: true
+exclude:
+  - '**/vendor/**/*'
 linters:
   ErbSafety:
     enabled: true
-
   Rubocop:
     enabled: true
     rubocop_config:
