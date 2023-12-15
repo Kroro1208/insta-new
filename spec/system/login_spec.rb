@@ -11,7 +11,7 @@ RSpec.describe 'ログイン', type: :system do
           fill_in 'パスワード', with: '12345678'
           click_on 'ログイン'
         end
-        expect(page).to have_content ('ログインに失敗しました')
+        expect(page).to have_content 'ログインに失敗しました'
       end
     end
 
@@ -23,7 +23,7 @@ RSpec.describe 'ログイン', type: :system do
           fill_in 'パスワード', with: '12345678'
           click_on 'ログイン'
         end
-        expect(page).to have_content ('ログインしました')
+        expect(page).to have_content 'ログインしました'
       end
     end
   end
@@ -36,7 +36,7 @@ RSpec.describe 'ログイン', type: :system do
     it 'ログアウトができること' do
       find("#header-avatar-dropdown").click
       accept_confirm { click_on 'ログアウト' }
-      expect(page).to have_content ('ログアウトしました')
+      expect(page).to have_content 'ログアウトしました'
     end
   end
 
@@ -51,7 +51,7 @@ RSpec.describe 'ログイン', type: :system do
         within '#header' do
           expect(page).not_to have_link 'ログイン', href: '/login'
           expect(page).not_to have_link 'サインアップ', href: '/signup'
-          expect(page).to have_css ('#header-avatar-dropdown')
+          expect(page).to have_css '#header-avatar-dropdown'
         end
       end
     end
@@ -62,7 +62,7 @@ RSpec.describe 'ログイン', type: :system do
         within '#header' do
           expect(page).to have_link 'ログイン', href: '/login'
           expect(page).to have_link 'サインアップ', href: '/signup'
-          expect(page).not_to have_css ('#header-avatar-dropdown')
+          expect(page).not_to have_css '#header-avatar-dropdown'
         end
       end
     end

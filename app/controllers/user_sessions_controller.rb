@@ -5,6 +5,7 @@ class UserSessionsController < ApplicationController
     user = login(params[:email], params[:password])
 
     if user
+      logger.debug "ログインに成功しました" 
       redirect_back_or_to '/', success: 'ログインしました'
     else
       # flash.now[:danger] = 'ログインに失敗しました'
