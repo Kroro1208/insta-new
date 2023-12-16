@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
   def updated
     @post = current_user.posts.find(params[:id])
-    if @post.update(post_params)
+    if @post.update(posts_params)
       redirect_to post_path(@post), success: '投稿を更新しました'
     else
       render :edit, status: :unprocessable_entity
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
+  def posts_params
     params.require(:post).permit(:body, images: [])
   end
 end
