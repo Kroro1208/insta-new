@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @post = Post.with_attached_images.includes(:user).order(created_at: :desc)
+    @posts = Post.with_attached_images.includes(:user).order(created_at: :desc)
   end
 
   def show
