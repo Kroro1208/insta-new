@@ -15,5 +15,9 @@
 require "rails_helper"
 
 RSpec.describe Post, type: :model do
-    pending "add some examples to (or delete) #{__FILE__}"
+    describe 'factory bot' do
+        it 'factory botでレコードが作成できること' do
+            expect { create(:post) }.to change(Post, :count).by(1)
+        end
+    end
 end
