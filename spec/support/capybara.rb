@@ -15,8 +15,8 @@ if ENV['SELENIUM_DRIVER_URL']
     Capybara::Selenium::Driver.new(
       app,
       browser: :remote,
-      url: url,
-      options: options
+      url:,
+      options:
     )
   end
   Capybara.server_host = IPSocket.getaddress(Socket.gethostname)
@@ -27,9 +27,8 @@ else
     Capybara::Selenium::Driver.new(
       app,
       browser: :chrome,
-      # driver_path: '/usr/local/bin/chromedriver_mac_arm64',
       timeout: ENV.fetch('CAPYBARA_TIMEOUT') { 10 },
-      options: options
+      options:
     )
   end
 end
