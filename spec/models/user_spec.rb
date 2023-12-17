@@ -20,5 +20,9 @@ require 'rails_helper'
 
 #まだ未定義
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'factory bot' do
+    it 'factory botでレコードが作成できること' do
+      expect { create(:user) }.to change(User, :count).by(1)
+    end
+  end
 end

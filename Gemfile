@@ -48,6 +48,17 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'pry-byebug'
+gem 'pry-nav'
+gem 'pry-rails'
+
+# 認証
+gem 'sorcery'
+# 国際化
+gem 'rails-i18n'
+
+gem 'activestorage-validator'
+
 group :development, :test do
   gem 'annotate'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -70,11 +81,6 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-# 認証
-gem 'sorcery'
-# 国際化
-gem 'rails-i18n'
 
 group :test do
   gem 'capybara'
