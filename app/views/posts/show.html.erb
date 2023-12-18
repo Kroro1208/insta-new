@@ -13,7 +13,7 @@
                           height: 40 %>
             <span class="font-weight-bold"><%= @post.user.username %></span>
           </div>
-          <!-- Menu --> # 自分の投稿以外はメニューを非表示にする
+          <!-- Menu 自分の投稿以外はメニューを非表示にする--> 
           <% if current_user && current_user.owner?(@post) %>
             <div class="dropdown text-center">
               <a
