@@ -1,0 +1,12 @@
+<%= form_with(mode: [post, comment], id: dom_id(comment. 'form'), class: 'row gy-2 gx-3 align-items-center') do |f| %>
+    <%= render 'shared/error_messages', object: comment %>
+    <div>
+        <div>
+            <%= f.text_area :body, class: 'form_control' %>
+            <%= f.label :body, class: 'form_label' %>
+        </div>
+    </div>
+    <div>
+        <%= f.submit class: 'btn btn-primary btn-sm' %>
+    </div>
+<% end %>

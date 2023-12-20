@@ -24,7 +24,7 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
     describe 'factory bot' do
         it 'factory botでレコードが作成できること' do
-            expect { create(:post) }.to change(Post, :count).by(1)
+            expect { create(:comment) }.to change(Comment, :count).by(1)
         end
     end
 end
