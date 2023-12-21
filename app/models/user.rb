@@ -16,7 +16,7 @@
 #  index_users_on_username  (username) UNIQUE
 #
 
-class User < ApplicationRecord
+cclass User < ApplicationRecord
   authenticates_with_sorcery!
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
