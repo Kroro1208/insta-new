@@ -30,16 +30,4 @@ class User < ApplicationRecord
   def owner?(object)
     object.user_id == id
   end
-
-  def like(_psot)
-    like_posts << Post
-  end
-
-  def unlike(post)
-    like_posrs.destroy(post)
-  end
-
-  def like?(psot)
-    like_posts.include?(psot)
-  end
 end
