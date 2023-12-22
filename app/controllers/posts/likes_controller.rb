@@ -1,4 +1,4 @@
-class Post::LikesCoontroller < ApplicationController
+class Posts::LikesCoontroller < ApplicationController
   before_action :require_login
 
   def create
