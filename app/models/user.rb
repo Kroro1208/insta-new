@@ -33,15 +33,15 @@ class User < ApplicationRecord
     object.user_id == id
   end
 
-  def like(psot)
-    like_posts << Post
+  def like(post)
+    like_posts << post
   end
 
   def unlike(post)
-    like_posrs.destroy(post)
+    like_posts.destroy(post)
   end
 
-  def like?(psot)
+  def like?(post)
     like_posts.include?(post)
   end
 end
