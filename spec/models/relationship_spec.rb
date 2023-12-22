@@ -19,7 +19,7 @@
 #  fk_rails_...  (followed_id => users.id)
 #  fk_rails_...  (follower_id => users.id)
 #
-requrie 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe Relationship, type: :model do
     pending "add some examples to (or delete) #{__FILE__}"

@@ -20,6 +20,6 @@
 #  fk_rails_...  (follower_id => users.id)
 #
 class Relationship < ApplicationRecord
-    belongs_to :follower
-    belongs_to :followed
+  belongs_to :follower
+  belongs_to :followed
 end
