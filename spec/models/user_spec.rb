@@ -91,7 +91,7 @@ RSpec.describe User, type: :model do
   end
 
   describe '#recent' do
-    let(base_datetime) {Time.current}
+    let(:base_datetime) {Time.current}
     let!(:user_a) { create(:user, created_at: base_datetime) }
     let!(:user_b) { create(:user, created_at: base_datetime.ago(1.day)) }
     let!(:user_c) { create(:user, created_at: base_datetime.ago(2.day)) }
