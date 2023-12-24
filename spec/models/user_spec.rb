@@ -97,7 +97,7 @@ RSpec.describe User, type: :model do
     let!(:user_c) { create(:user, created_at: base_datetime.ago(2.day)) }
     let!(:user_d) { create(:user, created_at: base_datetime.ago(3.day)) }
     it '新しくアカウントが作られた順にユーザーが取得できる' do
-      expect(User.ecent(3)).to eq [user_a, user_b, user_c]
+      expect(User.recent(3)).to eq [user_a, user_b, user_c]
     end
   end
 
