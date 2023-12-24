@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @pagy, @posts = pagy(Post.with_attached_images.includes(:user).order(created_at: :desc))
-    @user = User.all
   end
 
   def show
