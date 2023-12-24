@@ -1,4 +1,4 @@
-class Users::RelationshipsContoller < ApplicationController
+class Users::RelationshipsController < ApplicationController
   before_action :require_login
 
   def create
@@ -8,6 +8,6 @@ class Users::RelationshipsContoller < ApplicationController
 
   def destroy
     @user = User.find(params[:user_id])
-    current_user.unffollow(@user)
+    current_user.unfollow(@user)
   end
 end
