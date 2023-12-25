@@ -34,6 +34,14 @@
           <%= link_to 'ログイン', login_path, class: 'btn btn-link px-3 me-2' %>
           <%= link_to 'サインアップ', signup_path, class: 'btn btn-primary me-3' %>
         <% end %>
+        <a href='#'
+           id='serch-icon'
+           class='input-group-text border-0'
+           data-mdb-toggle="modal"
+           data-mdb-target="#searchModel"
+           data-mdb-whatever="@mdo">
+           <i class="fas far-search"></i>
+        </a>
 
         <% if logged_in? %>
           <%= link_to new_post_path, class: 'btn btn-primary btn-sm me-3' do %>
