@@ -17,6 +17,13 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many_attached :images
   has_many :comments, dependent: :destroy
+  def self.ransackable_attributes(_auth_object = nil)
+    ['body']
+  end
+
+  def self.ransackable_associations(_auth_object = nil)
+    %w[comments user]
+  end
   validates :body, presence: true
   validates :images, presence: true,
                      blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
