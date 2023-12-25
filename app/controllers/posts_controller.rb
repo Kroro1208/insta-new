@@ -7,7 +7,7 @@ class PostsController < ApplicationController
          else
            Post.ransack(params[:q])
          end
-    @pagy, @posts = pagy(@q.result(distinct: true).with_atttached_images.includes(:user).order(created_at: :desc))
+    @pagy, @posts = pagy(@q.result(distinct: true).with_attached_images.includes(:user).order(created_at: :desc))
   end
 
   def show
