@@ -1,6 +1,6 @@
 class UserDecrator < ApplicationDecorator
-	delegate_all
-	def avatar_url(size = :origin)
+  delegate_all
+  def avatar_url(size = :origin)
     return 'http://placehold.jp/150x150.png' unless avatar.attached?
 
     command = case size
