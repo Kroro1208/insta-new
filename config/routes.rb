@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resource :relationship, only: %i[create destroy], module: :users
   end
 
-  resources: notifications, only: [] do
+  resources :notifications, only: [] do
     resource :read, only: %i[create], module: :notifications
   end
 
@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   namespace :mypage do
     root to: 'accounts#edit'
     resource :account, only: %i[edit update]
-    resources: notifications, only: %i[index]
+    resources :notifications, only: %i[index]
   end
 end
