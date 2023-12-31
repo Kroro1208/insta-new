@@ -1,5 +1,5 @@
 class Notification < ApplicationRecord
-  has_many :user_notifications, dependent: :destoroy
+  has_many :user_notifications, dependent: :destroy
   has_many :users, through: :user_notifications
   validates :title, presence: true
   validates :url, presemce: true, format: /\A#{URI::DEFAULT_PARSER.make_regexp(%w[http https])}\z/
