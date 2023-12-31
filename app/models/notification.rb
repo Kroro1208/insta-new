@@ -1,4 +1,4 @@
-class Norification < ApplicationRecoed
+class Notification < ApplicationRecoed
   has_many :user_notifications, dependent: :destoroy
   has_many :users, through: :user_notifications
   validates :title, presence: true
