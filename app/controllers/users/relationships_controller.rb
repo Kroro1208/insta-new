@@ -20,4 +20,3 @@ class Users::RelationshipsController < ApplicationController
     notification.notify(user)
   end
 end
-c
