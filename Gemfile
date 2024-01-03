@@ -68,6 +68,9 @@ gem 'ransack'
 # デコレーター
 gem 'draper'
 
+# メール通知
+gem 'letter_opener_web'
+
 group :development, :test do
   gem 'annotate'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
