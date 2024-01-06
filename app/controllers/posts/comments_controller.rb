@@ -11,9 +11,11 @@ class Posts::CommentsController < ApplicationController
 
   def create
     @comment = current_user.comments.build(comment_params)
-    return unless @comment.save
-
-    create_notifications_about_comment_to_own_post(@comment)
+    # rubocop:disable Style/IfUnlessModifier, Style/GuardClause
+    if @comment.save
+      create_notifications_about_comment_to_own_post(@comment)
+      UserMailer.with(user_form: current_user, user_to: @comment.post.user, commnet: @comment).comment_post.delivery_later
+    # rubocop:disable Style/IfUnlessModifier, Style/GuardClause
   end
 
   def update
